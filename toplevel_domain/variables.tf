@@ -17,7 +17,10 @@ variable "zone_comment" {
 
 variable "tags" {
   type = "map"
-  default = {}
+  description = "map(list) of tags to add to everything we create with this module"
+  default = {
+    "terraform" = "true"
+  }
 }
 
 variable "region" {
